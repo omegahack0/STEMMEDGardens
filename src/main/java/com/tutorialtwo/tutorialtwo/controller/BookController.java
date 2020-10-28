@@ -44,7 +44,7 @@ public class BookController {
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Book create(@RequestParam("id") int itemID, @RequestParam("title") String title, @RequestParam("author") String author{
+    public Book create(@RequestParam("id") int itemID, @RequestParam("title") String title, @RequestParam("author") String author){
         Book book = new Book();
         book.setId(itemID);
         book.setTitle(title);
