@@ -34,10 +34,22 @@ public class BookController {
         return bookRepository.findById(id)
                 .orElseThrow(BookNotFoundException::new);
     }
-
+/*
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Book create(@RequestBody Book book){
+        return bookRepository.save(book);
+    }*/
+
+    
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Book create(@RequestParam("id") int itemID, @RequestParam("title"), @RequestParam("author"){
+        Book book = new Book();
+        book.setId(itemID);
+        book.setTitle(title);
+        book.setAuthor(author);
+        
         return bookRepository.save(book);
     }
 
