@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class TutorialController {
@@ -11,8 +12,14 @@ public class TutorialController {
     String appName;
 
     @GetMapping("/")
-    public String homePage(Model model){
+    public String homePage(Model model) {
         model.addAttribute("appName", appName);
         return "home";
     }
+
+    @GetMapping("/local")
+    public String localPage () {
+        return "Locale";
+    }
+
 }
