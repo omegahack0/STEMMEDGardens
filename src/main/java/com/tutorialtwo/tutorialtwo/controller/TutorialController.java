@@ -17,7 +17,7 @@ public class TutorialController {
         return "home";
     }
 
-    @GetMapping("/local")
+    @GetMapping("/locale")
     public String localPage () {
         return "Locale";
     }
