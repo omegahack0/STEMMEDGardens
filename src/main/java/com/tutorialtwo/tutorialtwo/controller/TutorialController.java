@@ -1,13 +1,11 @@
 package com.tutorialtwo.tutorialtwo.controller;
 
 import com.tutorialtwo.tutorialtwo.domain.Book;
+import com.tutorialtwo.tutorialtwo.handlingformsubmission;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TutorialController {
@@ -19,23 +17,22 @@ public class TutorialController {
         model.addAttribute("appName", appName);
         return "home";
     }
-    @GetMapping("/createBook")
-    public String saveBook(Model model){
-        try {
-//            book.save(book);
-            model.addAttribute("book", new Book());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return  "createBook";
-//        https://stackoverflow.com/questions/40899494/how-to-get-input-values-from-spring-boot-thyme-leaf-to-java-class
+    @GetMapping("/greeting")
+    public String greetingForm(Model model) {
+        model.addAttribute("greeting", new handlingformsubmission());
+        return "greeting";
     }
-    @PostMapping("/createBook")
-    public String saveBook(@ModelAttribute("book") Book book) {
 
-        book.getTitle();
-        book.getAuthor();
-        return "redirect:someOtherPage";
+    @PostMapping("/greeting")
+    public String greetingSubmit(@ModelAttribute handlingformsubmission greeting, Model model) {
+        model.addAttribute("greeting", greeting);
+        return "result";
     }
+
+
 }
+
+//    Book book = new Book();
+//        book.setTitle(randomAlphabetic(10));
+//                book.setAuthor(randomAlphabetic(15));
+//                return book;
