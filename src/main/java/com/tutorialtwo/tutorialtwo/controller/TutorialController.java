@@ -24,15 +24,11 @@ public class TutorialController {
     }
 
     @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute handlingformsubmission greeting, Model model) {
-        model.addAttribute("greeting", greeting);
+    public String greetingSubmit(@ModelAttribute handlingformsubmission userPlant, Model model) {
+        model.addAttribute("greeting", userPlant);
         return "result";
+//        https://spring.io/guides/gs/handling-form-submission/
     }
 
 
 }
-
-//    Book book = new Book();
-//        book.setTitle(randomAlphabetic(10));
-//                book.setAuthor(randomAlphabetic(15));
-//                return book;

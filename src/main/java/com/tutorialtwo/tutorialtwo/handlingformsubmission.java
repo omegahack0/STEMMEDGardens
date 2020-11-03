@@ -2,9 +2,6 @@ package com.tutorialtwo.tutorialtwo;
 
 public class handlingformsubmission {
 
-    private long id;
-    private String content;
-
     public long getId() {
         return id;
     }
@@ -13,12 +10,33 @@ public class handlingformsubmission {
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
+    public String getName() {
+        return name;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getPlantDate() {
+        return plantDate;
+    }
+
+    public void setPlantDate(String plantDate) {
+        this.plantDate = plantDate;
+    }
+
+    private long id;
+    private String name;
+    private String type;
+    private String plantDate;
 
 }
