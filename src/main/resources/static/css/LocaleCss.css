@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+    background-color: black;
+}
+
 .map-container-5{
     overflow:hidden;
     padding-bottom:56.25%;

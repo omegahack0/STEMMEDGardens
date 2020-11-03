@@ -21,5 +21,8 @@ public class TutorialController {
     public String localPage () {
         return "Locale";
     }
-
+    @GetMapping("/calendar")
+    public String calendarPage () {
+        return "calendar";
+    }
 }
