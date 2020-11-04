@@ -4,7 +4,7 @@
   <!--Load Css-->
   <!-- <link type="text/css" href="HomeStyles.css" rel="stylesheet" /> -->
   <!-- <link href="HomeStyles.css" rel="stylesheet" type="text/css"/> -->
-  <link rel="stylesheet" type="text/css" href="css/HomeStyles.css">
+  <link rel="stylesheet" type="text/css" href="/css/HomeStyles.css">
   <link rel="stylesheet" type="text/css" href="/css/CalendarCss.css">
 
   <!-- <link rel = "stylesheet" type = "text/css" href = "HomeStyles.css" /> -->
@@ -12,14 +12,123 @@
     <!-- Load Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>STEMMED GARDENS</title>
+
+
 </head>
 <body>
+
+
+
+
+
+<!--Column Cards for the plant display-->
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  </style>
+  </head>
+  <body>
+  
+    <!--Title Text-->
+  <h2>Welcome to STEMMED GARDENS</h2>
+
+    <!--Embed Google Calendar-->
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bWFhbG9uZ2VAZ21haWwuY29t&amp;src=a2x1MjM5a2hya2Fhc2g3OGVuanUzMTQyNWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F6BF26&amp;color=%239E69AF&amp;color=%23009688" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+  <h2>My Plants</h2>
+  <p>Display's the plants the user has planted.</p>
+  
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 1</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 2</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 3</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 4</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+<!-- Navigation -->
+
+
 
 <!-- <h1>Welcome to STEMMED GARDENS!</h1> -->
 <!-- <p>Welcome to <span th:text="${appName}">Our App</span></p> -->
 <!--Navbar-->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <!-- 
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navigation</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -53,9 +162,11 @@
       </form>
     </div>
   </nav>
+-->
 
 
   <!--Calendar Start-->
+  <!--
   <br> <br> <br>
   <div class="calendar">
     <div class="header">
@@ -80,6 +191,12 @@
     </div>
 
 </div>
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!--JS for our calendar-->
 <!--
@@ -151,20 +268,11 @@ Calendar.prototype.nextMonth = function() {
 -->
 
 
-<script src="get.js"></script>
+<script src="/get.js"></script>
 
   <!--Begin for card theme, this is how we can have an interactive display for the users plants-->
 
-  <!--
-<div class="card">
-<div class="card-image"></div>
-  <div class="card-text">
-    <span class="date"> 4 days ago.</span>
-    <h2>Post 1</h2>
-    <p>1st post</p>
-  </div>
-  <div class="card-stats"></div>
--->
+
     
 
 
