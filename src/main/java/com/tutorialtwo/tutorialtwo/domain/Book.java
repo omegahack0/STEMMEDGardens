@@ -38,4 +38,11 @@ public class Book {
     public void setId(long id) {
         this.id = id;
     }
+
+    private Book createBook(String Title,String Author){
+        Book book = new Book();
+        book.setTitle(Title);
+        book.setAuthor(Author);
+        return book;
+    }
 }
