@@ -21,7 +21,6 @@ public class UsdaInfo {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             log.error("Necessary file Zip2USDAZone.csv was not found.", e);
-
         }
         String str="";
         Map<String,String> usdaZipMap = new HashMap<String,String>();
@@ -55,7 +54,7 @@ public class UsdaInfo {
     public static String getUSDAZone(userZipcode userZip) throws IOException {
         //create hash map
         Map<String, String> usdaZipMap = createUsdaMap();
-        String USDAZone = usdaZipMap.get(userZip); //put the userZip string as the input
+        String USDAZone = usdaZipMap.get(userZip); //put the userZip string as the input Also the problem line of code
         return USDAZone;
     }
 }
