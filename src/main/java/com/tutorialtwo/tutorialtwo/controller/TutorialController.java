@@ -1,5 +1,6 @@
 package com.tutorialtwo.tutorialtwo.controller;
 
+import com.tutorialtwo.tutorialtwo.domain.UsdaInfo;
 import com.tutorialtwo.tutorialtwo.userZipcode;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -7,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.io.IOException;
 
 @Controller
 public class TutorialController {
@@ -26,8 +29,10 @@ public class TutorialController {
     }
 
     @PostMapping("/GetUserZipcode")
-    public String zipcodeSubmit(@ModelAttribute userZipcode userZip, Model model) {
+    public String zipcodeSubmit(@ModelAttribute userZipcode userZip, Model model) throws IOException {
+        String userUSDAZone = UsdaInfo.getUSDAZone(userZip);
         model.addAttribute("GetUserZipcode", userZip);
+        model.addAttribute("GetUserZipcode", userUSDAZone);
         return "result";
 
     }

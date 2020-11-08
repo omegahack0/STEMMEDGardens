@@ -1,5 +1,6 @@
 package com.tutorialtwo.tutorialtwo.domain;
 
+import com.tutorialtwo.tutorialtwo.userZipcode;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -12,7 +13,7 @@ public class UsdaInfo {
 
     private static Log log = LogFactory.getLog(UsdaInfo.class);
 
-    public void createUsdaMap(String[] args) throws IOException {
+    public static Map<String, String> createUsdaMap() throws IOException {
 
         BufferedReader br = null;
         try {
@@ -28,6 +29,7 @@ public class UsdaInfo {
         {
             usdaZipMap.put(str.split(",")[0],str.split(",")[1]);
         }
+        return usdaZipMap;
     }
 
     public static void createUsdaTempsMap(String[] args) throws IOException {
@@ -49,6 +51,12 @@ public class UsdaInfo {
         }
         System.out.println(usdaLowTempsMap);
 
+    }
+    public static String getUSDAZone(userZipcode userZip) throws IOException {
+        //create hash map
+        Map<String, String> usdaZipMap = createUsdaMap();
+        String USDAZone = usdaZipMap.get(userZip); //put the userZip string as the input
+        return USDAZone;
     }
 }
 
