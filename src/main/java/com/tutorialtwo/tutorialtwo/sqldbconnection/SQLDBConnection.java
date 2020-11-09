@@ -1,4 +1,4 @@
-package SQLDBConnection;
+package com.tutorialtwo.tutorialtwo.sqldbconnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
