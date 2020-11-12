@@ -31,6 +31,24 @@ public class UsdaInfo {
         return usdaZipMap;
     }
 
+    public static Map<String, String> createPlantRecommendationsMap() throws IOException {
+
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(new File("src/main/resources/USDAZone2Plant.csv")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            log.error("Necessary file USDAZone2Plant.csv was not found.", e);
+        }
+        String str="";
+        Map<String,String> usdaPlantMap = new HashMap<String,String>();
+        while((str=br.readLine())!=null)
+        {
+            usdaPlantMap.put(str.split(",")[0],str.split(",")[1]);
+        }
+        return usdaPlantMap;
+    }
+
     public static void createUsdaTempsMap(String[] args) throws IOException {
 
         BufferedReader br = null;
@@ -51,10 +69,13 @@ public class UsdaInfo {
         System.out.println(usdaLowTempsMap);
 
     }
-    public static String getUSDAZone(userZipcode userZip) throws IOException {
-        //create hash map
-        Map<String, String> usdaZipMap = createUsdaMap();
-        String USDAZone = usdaZipMap.get(userZip); //put the userZip string as the input Also the problem line of code
+    public static String getUSDAZone(String userZip) throws IOException {
+        Map<String, String> usdaZipSearchMap = createUsdaMap();
+        Map<String, String> usdaPlantRecommendationsMap = createPlantRecommendationsMap();
+        String USDAZone = usdaZipSearchMap.get(userZip); //put the userZip string as the input Also the problem line of code
+        String PlantRecommendations = usdaPlantRecommendationsMap.get(USDAZone);
+        System.out.println(USDAZone);
+        System.out.println(PlantRecommendations);
         return USDAZone;
     }
 }

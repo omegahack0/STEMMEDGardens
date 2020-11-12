@@ -1,13 +1,15 @@
 package com.tutorialtwo.tutorialtwo;
 
 public class userZipcode {
-    public long zipcode;
+    public String zipcode;
+    public String UsdaInfo;
 
-    public long getZipcode() {
+
+    public String getZipcode() {
         return zipcode;
     }
 
-    public void setZipcode(long zipcode) {
+    public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 }
