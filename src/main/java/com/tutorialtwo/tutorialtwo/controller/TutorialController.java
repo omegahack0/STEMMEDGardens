@@ -32,7 +32,7 @@ public class TutorialController {
     public String zipcodeSubmit(@ModelAttribute userZipcode userZip, Model model) throws IOException {
         String userUSDAZone = UsdaInfo.getUSDAZone(userZip.zipcode);
         model.addAttribute("GetUserZipcode", userZip);
-        model.addAttribute("GetUserZipcode", userUSDAZone);//the problem child
+        model.addAttribute("UserUSDAZone", userUSDAZone);//the problem child
         return "result";
 
     }
