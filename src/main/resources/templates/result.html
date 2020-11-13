@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1>Result</h1>
-<p th:text="'zipcode: ' + ${GetUserZipcode.zipcode}" />
-<p th:text="'userUSDAZone: ' + ${UserUSDAZone}" />
+<p th:text="'zipcode: ' + ${UserZipcodeObj.zipcode}" />
+<p th:text="'userUSDAZone: ' + ${UserUSDAZoneObj}" />
 <a href="/GetUserZipcode">Submit another message</a>
 </body>
 </html>

@@ -1,6 +1,5 @@
 package com.tutorialtwo.tutorialtwo.domain;
 
-import com.tutorialtwo.tutorialtwo.userZipcode;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

@@ -1,7 +1,7 @@
 package com.tutorialtwo.tutorialtwo.controller;
 
 import com.tutorialtwo.tutorialtwo.domain.UsdaInfo;
-import com.tutorialtwo.tutorialtwo.userZipcode;
+import com.tutorialtwo.tutorialtwo.UserZipcode;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,16 +23,16 @@ public class TutorialController {
     }
     @GetMapping("/GetUserZipcode")
     public String zipcodeForm(Model model) {
-        model.addAttribute("GetUserZipcode", new userZipcode());
+        model.addAttribute("UserZipcodeObj", new UserZipcode());
         //need to add try catch statement to verify user input
-        return "GetUserZipcode";
+        return "getUserZipcode";
     }
 
     @PostMapping("/GetUserZipcode")
-    public String zipcodeSubmit(@ModelAttribute userZipcode userZip, Model model) throws IOException {
+    public String zipcodeSubmit(@ModelAttribute UserZipcode userZip, Model model) throws IOException {
         String userUSDAZone = UsdaInfo.getUSDAZone(userZip.zipcode);
-        model.addAttribute("GetUserZipcode", userZip);
-        model.addAttribute("UserUSDAZone", userUSDAZone);//the problem child
+        model.addAttribute("UserZipcodeObj", userZip);
+        model.addAttribute("UserUSDAZoneObj", userUSDAZone);//the problem child
         return "result";
 
     }

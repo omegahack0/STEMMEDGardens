@@ -1,6 +1,6 @@
 package com.tutorialtwo.tutorialtwo;
 
-public class userZipcode {
+public class UserZipcode {
     public String zipcode;
     public String UsdaInfo;
 
