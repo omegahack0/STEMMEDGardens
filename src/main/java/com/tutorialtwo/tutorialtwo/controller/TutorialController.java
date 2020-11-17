@@ -25,4 +25,12 @@ public class TutorialController {
     public String calendarPage () {
         return "calendar";
     }
-}
+
+    @GetMapping("/social")
+        public String SocialPage(){
+        return "Social";
+        }
+        
+    }
+
+
