@@ -19,7 +19,7 @@ public class TutorialController {
 
     @GetMapping("/locale")
     public String localPage () {
-        return "Locale";
+        return "locale";
     }
     @GetMapping("/calendar")
     public String calendarPage () {
@@ -28,7 +28,7 @@ public class TutorialController {
 
     @GetMapping("/social")
         public String SocialPage(){
-        return "Social";
+        return "social";
         }
         
     }
