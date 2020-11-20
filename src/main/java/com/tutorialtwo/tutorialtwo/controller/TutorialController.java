@@ -1,7 +1,7 @@
 package com.tutorialtwo.tutorialtwo.controller;
 
-import com.tutorialtwo.tutorialtwo.domain.UsdaInfo;
 import com.tutorialtwo.tutorialtwo.UserZipcode;
+import com.tutorialtwo.tutorialtwo.domain.UsdaInfo;
 import com.tutorialtwo.tutorialtwo.entity.Faculty;
 import com.tutorialtwo.tutorialtwo.service.FacultyService;
 import org.springframework.beans.factory.annotation.Value;

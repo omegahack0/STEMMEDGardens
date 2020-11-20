@@ -10,7 +10,7 @@ public interface FacultyRepository extends JpaRepository<Faculty, Integer> {
 	
 	
 	//Method to sort the results by last name asc
-	List<Faculty>findAllByOrderByLastNameAsc();
+	public List<Faculty>findAllByOrderByLastNameAsc();
 	
 	
 }
